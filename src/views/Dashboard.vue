@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="page-view">
     <v1-grid guides flat size="12x10" gap="10">
       <v1-cell size="12x2">
         <v1-nav />
