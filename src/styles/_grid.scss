@@ -1,0 +1,21 @@
+.u-grid { 
+    display:grid;
+    height:calc(100vh - 170px);
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-column-gap:$gutter;
+    grid-row-gap:$gutter;
+    justify-items: stretch;
+    align-items: stretch;
+}
+
+.u-grid-area {
+    border-radius:3px;
+    background-color:$grey;
+    border:$gutter solid $grey;
+    grid-column-start: auto;
+    grid-column-end: auto;
+    grid-row-start: auto;
+    grid-row-end: auto;
+    overflow:hidden;
+}

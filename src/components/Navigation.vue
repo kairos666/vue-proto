@@ -20,9 +20,9 @@
         <label>choix de langue</label>
         <select>
           <option selected>FR</option>
-          <option selected>EN</option>
-          <option selected>IT</option>
-          <option selected>DE</option>
+          <option>EN</option>
+          <option>IT</option>
+          <option>DE</option>
         </select>
       </div>
     </menu>
