@@ -9,6 +9,14 @@ $black: #3e3e3e;
 $black-lite: #4c4d4a;
 $grey: #f5f5f5;
 
+/* color milligram override */
+$color-initial: $white;
+$color-primary: $green;
+$color-secondary: $brown;
+$color-tertiary: $grey;
+$color-quaternary: $black-lite;
+$color-quinary: $black;
+
 /* dimensions */
 $gutter: 10px;
 $logo-size: 70px;

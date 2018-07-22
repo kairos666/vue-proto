@@ -18,6 +18,7 @@ export default {
 
 <style lang="scss">
   @import 'styles/_variables.scss';
+  @import '../node_modules/milligram/src/milligram.sass';
   @import 'styles/_general.scss';
 
 </style>
