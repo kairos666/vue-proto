@@ -6,9 +6,9 @@
     <menu class="main-navigation">
       <ul>
         <li><router-link to="/">tableau de bord</router-link></li>
-        <li><router-link to="/about">gestion</router-link></li>
-        <li><router-link to="/dashboard">clientèle</router-link></li>
-        <li><router-link to="/dashboard">information</router-link></li>
+        <li><router-link to="/management">gestion</router-link></li>
+        <li><router-link to="/clients">clientèle</router-link></li>
+        <li><router-link to="/information">information</router-link></li>
       </ul>
     </menu>
     <menu class="account-menu">
@@ -68,7 +68,7 @@ export default {
     }
     a { text-decoration:none; font-size:1.8rem; font-weight:bold; color:$black; padding:$gutter $gutter ($gutter/2); display:block; 
       &:hover, &:focus, &:active { border-bottom:3px solid $black-lite; }
-      &.router-link-active { border-bottom:3px solid $green; }
+      &.router-link-exact-active { border-bottom:3px solid $green; }
     }
   }
 

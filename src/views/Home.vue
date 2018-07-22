@@ -62,15 +62,14 @@
           </carousel>
         </template>
       </card>
-      <card class="u-grid-area u-grid-area--tx-occupation">
-        <h2 slot="title">Taux d'occupation</h2>
+      <card class="u-grid-area u-grid-area--room-rates">
+        <h2 slot="title">Evolution du prix moyen de la chambre<button type="button" class="button button-outline float-right"><i class="material-icons">visibility</i></button></h2>
         <template slot="content">
-          <v1-chart height="140" />
+          <bar-chart :width="800" :height="160" class="dynamic-chart" :data="$store.state.chartData.roomRates" :options="{ responsive: false, maintainAspectRatio: false }"></bar-chart>
         </template>
         <menu class="actions actions--aright" slot="footer">
-          <button type="button" class="button button-outline">semaine précédente</button>
-          <button type="button" class="button button-outline">semaine suivante</button>
-          <button type="button" class="button">voir détail</button>
+          <button type="button" class="button button-outline float-left"><i class="material-icons">keyboard_arrow_left</i> mois précédent</button>
+          <button type="button" class="button button-outline float-right">mois suivant <i class="material-icons">keyboard_arrow_right</i></button>
         </menu>
       </card>
       <card class="u-grid-area u-grid-area--hotel-detail">
@@ -86,16 +85,47 @@
           <v1-avatar count="20" />
         </template>
       </card>
+      <card class="u-grid-area u-grid-area--stats3">
+        <h2 slot="title">Tx occupation<button type="button" class="button button-outline float-right"><i class="material-icons">visibility</i></button></h2>
+        <template slot="content">
+          <donut-chart class="dynamic-chart" :data="$store.state.chartData.txocc"></donut-chart>
+        </template>
+        <template slot="footer">
+          <strong>69%</strong>
+        </template>
+      </card>
+      <card class="u-grid-area u-grid-area--stats2">
+        <h2 slot="title">Tx concrétisation<button type="button" class="button button-outline float-right"><i class="material-icons">visibility</i></button></h2>
+        <template slot="content">
+          goupl2
+        </template>
+      </card>
+      <card class="u-grid-area u-grid-area--stats1">
+        <h2 slot="title">Indice de fréqu.<button type="button" class="button button-outline float-right"><i class="material-icons">visibility</i></button></h2>
+        <template slot="content">
+          
+        </template>
+      </card>
+      <card class="u-grid-area u-grid-area--stats4">
+        <h2 slot="title">Ca/client<button type="button" class="button button-outline float-right"><i class="material-icons">visibility</i></button></h2>
+        <template slot="content">
+          goupl2
+        </template>
+      </card>
     </div>
   </div>
 </template>
 
 <script>
 import Card from '@/components/nano/Card';
+import DonutChart from '@/components/nano/DonutChart';
+import BarChart from '@/components/nano/BarChart';
 
 export default {
   components: {
-    Card
+    Card,
+    DonutChart,
+    BarChart
   }
 }
 </script>
@@ -104,14 +134,28 @@ export default {
   @import '../styles/_variables.scss';
   @import '../styles/_grid.scss';
 
+  .dynamic-chart { margin-top:$gutter/2; }
+
   .u-grid-area--com {
     grid-area: 1 / 1 / 2 / 5;
   }
   .u-grid-area--notifs {
     grid-area: 2 / 1 / 3 / 5;
   }
-  .u-grid-area--tx-occupation {
-    grid-area: 3 / 1 / 5 / 5;
+  .u-grid-area--stats1 {
+    grid-area: 3 / 1 / 4 / 2;
+  }
+  .u-grid-area--stats2 {
+    grid-area: 4 / 1 / 5 / 2;
+  }
+  .u-grid-area--stats3 {
+    grid-area: 3 / 3 / 5 / 4;
+  }
+  .u-grid-area--stats4 {
+    grid-area: 3 / 4 / 5 / 5;
+  }
+  .u-grid-area--room-rates {
+    grid-area: 5 / 1 / 7 / 5;
   }
   .u-grid-area--hotel-detail {
     grid-area: 1 / 5 / 4 / 7;
