@@ -40,3 +40,15 @@ menu.actions { margin:0; padding-left:0;
 .text.text.text { padding-top:$gutter;
   p { margin-bottom:($gutter/2); }
 }
+
+/* indicator */
+.indicator { font-size:3rem; font-weight:bold; margin:0;
+  figcaption { display:inline; font-size:1.4rem; font-weight:normal; }
+  &.indicator-small { font-size:2rem;
+    figcaption { font-size:1.1rem; }
+  }
+  &.indicator-big { font-size:4rem;
+    figcaption { font-size:1.9rem; }
+  }
+  + .indicator { margin-top:$gutter; }
+}

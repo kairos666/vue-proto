@@ -63,7 +63,7 @@
         </template>
       </card>
       <card class="u-grid-area u-grid-area--room-rates">
-        <h2 slot="title">Evolution du prix moyen de la chambre<button type="button" class="button button-outline float-right"><i class="material-icons">visibility</i></button></h2>
+        <h2 slot="title">Evolution du prix moyen de la chambre - juillet 2018<button type="button" class="button button-outline float-right"><i class="material-icons">visibility</i></button></h2>
         <template slot="content">
           <bar-chart :width="800" :height="160" class="dynamic-chart" :data="$store.state.chartData.roomRates" :options="{ responsive: false, maintainAspectRatio: false }"></bar-chart>
         </template>
@@ -88,28 +88,35 @@
       <card class="u-grid-area u-grid-area--stats3">
         <h2 slot="title">Tx occupation<button type="button" class="button button-outline float-right"><i class="material-icons">visibility</i></button></h2>
         <template slot="content">
-          <donut-chart class="dynamic-chart" :data="$store.state.chartData.txocc"></donut-chart>
+          <donut-chart class="dynamic-chart" :height="150" :data="$store.state.chartData.txocc"></donut-chart>
         </template>
         <template slot="footer">
-          <strong>69%</strong>
+          <figure class="indicator indicator-small">69%</figure>
         </template>
       </card>
       <card class="u-grid-area u-grid-area--stats2">
         <h2 slot="title">Tx concrétisation<button type="button" class="button button-outline float-right"><i class="material-icons">visibility</i></button></h2>
         <template slot="content">
-          goupl2
+          <figure class="indicator">46.2%
+            <figcaption>juillet (209 réservations, 453 appels)</figcaption>
+          </figure>
         </template>
       </card>
       <card class="u-grid-area u-grid-area--stats1">
         <h2 slot="title">Indice de fréqu.<button type="button" class="button button-outline float-right"><i class="material-icons">visibility</i></button></h2>
         <template slot="content">
-          
+          <figure class="indicator indicator-big">2.14</figure>
         </template>
       </card>
       <card class="u-grid-area u-grid-area--stats4">
-        <h2 slot="title">Ca/client<button type="button" class="button button-outline float-right"><i class="material-icons">visibility</i></button></h2>
+        <h2 slot="title">CA ce jour<button type="button" class="button button-outline float-right"><i class="material-icons">visibility</i></button></h2>
         <template slot="content">
-          goupl2
+          <figure class="indicator indicator-small">64.2€
+            <figcaption>/ clients</figcaption>
+          </figure>
+          <figure class="indicator indicator-small">3402€
+            <figcaption> global</figcaption>
+          </figure>
         </template>
       </card>
     </div>
@@ -146,13 +153,13 @@ export default {
     grid-area: 3 / 1 / 4 / 2;
   }
   .u-grid-area--stats2 {
-    grid-area: 4 / 1 / 5 / 2;
+    grid-area: 4 / 1 / 5 / 3;
   }
   .u-grid-area--stats3 {
-    grid-area: 3 / 3 / 5 / 4;
+    grid-area: 3 / 3 / 5 / 5;
   }
   .u-grid-area--stats4 {
-    grid-area: 3 / 4 / 5 / 5;
+    grid-area: 3 / 2 / 4 / 3;
   }
   .u-grid-area--room-rates {
     grid-area: 5 / 1 / 7 / 5;

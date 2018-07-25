@@ -7,11 +7,11 @@ export default {
   data() {
       return {
         defaultOptions: {
-            responsive: true, 
-            maintainAspectRatio: true,
-            legend: {
-                display: false
-            }
+          responsive: true, 
+          maintainAspectRatio: true,
+          legend: {
+              position:'right'
+          }
         }
       };
   },
