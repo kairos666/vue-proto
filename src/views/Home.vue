@@ -105,7 +105,7 @@
       <card class="u-grid-area u-grid-area--stats1">
         <h2 slot="title">Indice de fréqu.<button type="button" class="button button-outline float-right"><i class="material-icons">visibility</i></button></h2>
         <template slot="content">
-          <figure class="indicator indicator-big">2.14</figure>
+          <figure class="indicator indicator-very-big">2.14</figure>
         </template>
       </card>
       <card class="u-grid-area u-grid-area--stats4">

@@ -50,5 +50,8 @@ menu.actions { margin:0; padding-left:0;
   &.indicator-big { font-size:4rem;
     figcaption { font-size:1.9rem; }
   }
+  &.indicator-very-big { font-size:4.5rem;
+    figcaption { font-size:2.2rem; }
+  }
   + .indicator { margin-top:$gutter; }
 }

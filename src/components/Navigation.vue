@@ -24,6 +24,8 @@
           <option>IT</option>
           <option>DE</option>
         </select>
+        <hr>
+        <a href="#" title="déconnexion"><i class="material-icons">cancel</i>déconnexion</a>
       </div>
     </menu>
   </header>
@@ -86,5 +88,6 @@ export default {
       label { margin-right:$gutter; margin-top:$gutter; }
       select { margin-top:$gutter; background-color:$white; }
     }
+    hr { margin:$gutter 0; }
   }
 </style>
